@@ -5,7 +5,7 @@ angular.module('gym-buddies')
 		controller: HomeController
 	})
 
-	function HomeController(){
+	function HomeController(FBREF){
 		
 	}
 	

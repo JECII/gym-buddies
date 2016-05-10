@@ -8,7 +8,7 @@
 
 	function AuthController($scope, FBREF) {
 		var ac = this;
-		var db = new Firebase(FBREF);
+		var db = new Firebase(FBREF+'chats');
 
 		ac.$onInit = activate;
 

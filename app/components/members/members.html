@@ -1,1 +1,64 @@
-<h1>Hello</h1>
+<body>
+
+    <div class="panel-body">
+
+        <form ng-submit="$ctrl.addPost($ctrl.newPost)" class="form">
+
+            <div clas="form-group">
+                <hr>
+
+                <label for="post">Post:</label>
+                <input type="text" class="form-control" ng-model="$ctrl.newPost.title">
+                
+                <label for="post">Body:</label>
+                <input type="text" class="form-control" ng-model="$ctrl.newPost.body">
+
+                
+                <label for="image">Images:</label>
+                <input type="img" class="form-control" ng-model="$ctrl.newPost.img">
+                <hr>
+
+            </div>
+            <div class="btn-group">
+
+                <button type="submit" class="btn btn-success">SubMit</button>
+
+                <button type="reset" class="btn btn-primary">ReSet</button>
+                <hr>
+
+            </div>
+
+        </form>
+        <div class="list-group">
+
+            <div class="list-group-item" ng-repeat="post in $ctrl.posts">
+                <div class="media">
+                    <div class="media-left">
+                        <img width="150" ng-src="{{post.img}}" alt="img">
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <h4>{{post.title}}</h4>
+                            <p> {{post.body}}</p>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary btn-lrg" ng-click="$ctrl.editPost(post)">EdIt</button>
+                                <button type="button" class="btn btn-danger btn-lrg" ng-click="$ctrl.removePost(post)">DelEte</button>
+                                <hr>
+                            </div>
+                            
+                            <div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
